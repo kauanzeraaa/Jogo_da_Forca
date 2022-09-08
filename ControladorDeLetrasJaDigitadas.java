@@ -12,9 +12,9 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
     {
         boolean torna = false;
         int contador = 0;
-        for (i = 0; letrasJaDigitadas.charAt(); i++)
+        for (int i = 0; letrasJaDigitadas.charAt(i); i++)
         {
-            if(letrasJaDigitadas.charAt(i) == letras)
+            if(letrasJaDigitadas.charAt(i) == letra)
             {
                 contador ++;
             }
