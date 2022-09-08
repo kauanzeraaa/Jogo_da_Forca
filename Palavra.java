@@ -80,10 +80,11 @@ public class Palavra implements Comparable<Palavra>
 
     public int hashCode ()
     {
-
-        
+        int hash = 2;
+        hash = 2 * 3 + new String (this.texto).hashCode();
+        if(hash < 0) hash = - hash; // se hash for negativo, o if fará a conta para trocar os sinais para negativo 
+        return hash;
         // calcular e retornar o hashcode de this
-        return 8;
     }
 
     public int compareTo (Palavra palavra)

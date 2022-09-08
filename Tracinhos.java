@@ -50,6 +50,10 @@ public class Tracinhos implements Cloneable
 
     public int hashCode ()
     {
+        int hash = 2;
+        hash = 2 * 3 + new char (this.texto).hashCode();
+        if(hash < 0) hash = - hash; 
+        return hash;
         // calcular e retornar o hashcode de this
     }
 

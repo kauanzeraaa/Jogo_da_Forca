@@ -16,6 +16,9 @@ public class TestePalavra {
             else {
                 System.out.println("Object e palavra não são iguais :P");
             }
+
+            // testando método hashCode
+            System.out.println(palavra.hashCode());
         }
         catch (Exception e) {
             System.err.println(e.getMessage());

@@ -4,15 +4,27 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
 
     public ControladorDeLetrasJaDigitadas ()
     {
+        this.letrasJaDigitadas = " ";
         // torna this.letrasJaDigitadas igual ao String vazio
     }
 
     public boolean isJaDigitada (char letra)
     {
+        boolean torna = false;
+        int contador = 0;
+        for (i = 0; letrasJaDigitadas.charAt(); i++)
+        {
+            if(letrasJaDigitadas.charAt(i) == letras)
+            {
+                contador ++;
+            }
+        }
+
+        // CONTINUAR PROGRAMANDOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
         // percorrer o String this.letrasJaDigitadas e verificar se ele
         // possui a letra fornecida, retornando true em caso afirmativo
         // ou false em caso negativo
-        return true;
     }
 
     public void registre (char letra) throws Exception
