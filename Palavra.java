@@ -30,26 +30,19 @@ public class Palavra implements Comparable<Palavra>
 
     public int getPosicaoDaIezimaOcorrencia (int i, char letra) throws Exception
     {
-        int qtdLetra = getQuantidade(letra);
-        if (i >= qtdLetra) {
-            throw new Exception("Posição Inválida");
-        }
         int contador = 0;
-        for (int k = 0; k<this.texto.length(); k++) {
+        for (int k = 0; k<this.texto.length(); k++) { 
 
-            if (letra == this.texto.charAt(k)) {
-                
-                if (contador == i) {
-                    
-                    contador++;
-                    return this.texto.indexOf(letra);
-                }
+            if (letra == this.texto.charAt(k)) { 
+                contador ++;
+            }
+            if (contador == i) {
+                return k;
             }
         }
-        return i;
+        throw new Exception("[ERRO] A iézima ocorrência da letra inserida não é válida");
     }
-        // ERRO AQUI NÃO SEI O QUE RETORNAR 
-
+        
         // se i==0, retorna a posicao em que ocorre a primeira
         // aparicao de letra fornecida em this.texto;
         // se i==1, retorna a posicao em que ocorre a segunda
