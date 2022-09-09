@@ -5,6 +5,13 @@ public class Tracinhos implements Cloneable
 
     public Tracinhos (int qtd) throws Exception
     {
+        if (qtd < 0) throw new Exception();
+        
+        char vetorTexto[] = new char[qtd];
+        this.texto[qtd] = vetorTexto[qtd];
+        for (int i = 0; i<this.texto.length; i++) {
+            this.texto[i] = '_';
+        }
 		// verifica se qtd n�o � positiva, lan�ando uma exce��o.
 		// instancia this.texto com um vetor com tamanho igual qtd.
 		// preenche this.texto com underlines (_).
@@ -41,8 +48,8 @@ public class Tracinhos implements Cloneable
 
         if (this.getClass() != obj.getClass()) return false;
 
-        Tracinhos p = (Tracinhos)obj;
-        if (this.texto != p.texto) return false;
+        Tracinhos t = (Tracinhos)obj;
+        if (this.texto != t.texto) return false;
         
         return true;
         // verificar se this e obj possuem o mesmo conte�do, retornando
