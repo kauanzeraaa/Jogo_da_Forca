@@ -3,6 +3,7 @@ public class Palavra implements Comparable<Palavra>
 {
     private String texto;
 
+    /* FEITO */
     public Palavra (String texto) throws Exception
     {
         if (texto != null && texto != "") {
@@ -16,7 +17,8 @@ public class Palavra implements Comparable<Palavra>
 		// armazena o texto recebido em this.texto. FEITO
     }
 
-    public int getQuantidade (char letra)
+    /* FEITO */
+    public int getQuantidade (char letra) 
     {
         int qtdLetra = 0;
         for (int k = 0; k<this.texto.length(); k++) {
@@ -29,6 +31,7 @@ public class Palavra implements Comparable<Palavra>
         // quantas letras existem nele iguais a letra fornecida 
     } 
 
+    /* FEITO */
     public int getPosicaoDaIezimaOcorrencia (int i, char letra) throws Exception
     {
         int contador = 0;
@@ -64,7 +67,8 @@ public class Palavra implements Comparable<Palavra>
         return this.texto;
     }
 
-    public boolean equals (Object obj)
+    /* FEITO */
+    public boolean equals (Object obj) 
     {
         if (this == obj) return true;
         if (obj == null) return false;
@@ -79,6 +83,7 @@ public class Palavra implements Comparable<Palavra>
         // true no caso afirmativo ou false no caso negativo
     }
 
+    /* FEITO */
     public int hashCode ()
     {
         int hash = 2;
