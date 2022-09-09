@@ -3,7 +3,6 @@ public class Palavra implements Comparable<Palavra>
 {
     private String texto;
 
-    /* FEITO */
     public Palavra (String texto) throws Exception
     {
         if (texto != null && texto != "") {
@@ -12,12 +11,9 @@ public class Palavra implements Comparable<Palavra>
         else {
             throw new Exception("[ERRO] Texto não declarado");
         }
-		// verifica se o texto recebido � nulo ou ent�o vazio,
-		// ou seja, sem nenhum caractere, lan�ando exce��o.
-		// armazena o texto recebido em this.texto. FEITO
+		
     }
 
-    /* FEITO */
     public int getQuantidade (char letra) 
     {
         int qtdLetra = 0;
@@ -27,14 +23,11 @@ public class Palavra implements Comparable<Palavra>
             }
         }
         return qtdLetra;
-        // percorre o String this.texto, conta e retorna
-        // quantas letras existem nele iguais a letra fornecida 
     } 
 
-    /* FEITO */
     public int getPosicaoDaIezimaOcorrencia (int i, char letra) throws Exception
     {
-        int contador = 0;
+        int contador = -1;
         for (int k = 0; k<this.texto.length(); k++) { 
 
             if (letra == this.texto.charAt(k)) { 
@@ -46,16 +39,6 @@ public class Palavra implements Comparable<Palavra>
         }
         throw new Exception("[ERRO] A iézima ocorrência da letra inserida não é válida");
     }
-        
-        // se i==0, retorna a posicao em que ocorre a primeira
-        // aparicao de letra fornecida em this.texto;
-        // se i==1, retorna a posicao em que ocorre a segunda
-        // aparicao de letra fornecida em this.texto;
-        // se i==2, retorna a posicao em que ocorre a terceira
-        // aparicao de letra fornecida em this.texto;
-        // e assim por diante.
-        // lan�ar excecao caso nao encontre em this.texto
-        // a I�zima apari��o da letra fornecida.
 
     public int getTamanho ()
     {
@@ -67,7 +50,6 @@ public class Palavra implements Comparable<Palavra>
         return this.texto;
     }
 
-    /* FEITO */
     public boolean equals (Object obj) 
     {
         if (this == obj) return true;
@@ -79,18 +61,14 @@ public class Palavra implements Comparable<Palavra>
         if (this.texto != p.texto) return false;
         
         return true;
-        // verificar se this e obj possuem o mesmo conte�do, retornando
-        // true no caso afirmativo ou false no caso negativo
     }
 
-    /* FEITO */
     public int hashCode ()
     {
         int hash = 2;
         hash = 2 * 3 + new String (this.texto).hashCode();
-        if(hash < 0) hash = - hash; // se hash for negativo, o if fará a conta para trocar os sinais para negativo 
+        if(hash < 0) hash = - hash;  
         return hash;
-        // calcular e retornar o hashcode de this
     }
 
     public int compareTo (Palavra palavra)

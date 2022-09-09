@@ -43,6 +43,9 @@ public class Forca
 				{
 					System.out.print   ("Qual letra? ");
 					char letra = Character.toUpperCase (Teclado.getUmChar());
+					
+					System.out.print("\033[H\033[2J");  
+    				System.out.flush();
 
 					if (controladorDeLetrasJaDigitadas.isJaDigitada (letra))
 						System.err.println ("Essa letra ja foi digitada!\n");
