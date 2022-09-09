@@ -1,3 +1,4 @@
+package servidor;
 public class BancoDePalavras
 {
     private static String[] palavras = 

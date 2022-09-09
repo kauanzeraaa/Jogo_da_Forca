@@ -1,3 +1,4 @@
+// package servidor;
 // import java.io.*;
 
 // public class Forca
@@ -95,6 +96,6 @@
 // 				}
 // 			}
 // 		}
-//         while (continuar=='S');
+//         while (continuar=='S'); // restart here
 //     }
 // }

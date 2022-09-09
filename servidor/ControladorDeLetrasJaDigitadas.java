@@ -1,3 +1,4 @@
+package servidor;
 public class ControladorDeLetrasJaDigitadas implements Cloneable
 {
     private String letrasJaDigitadas;

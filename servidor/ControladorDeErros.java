@@ -1,3 +1,4 @@
+package servidor;
 public class ControladorDeErros implements Cloneable
 {
     private int qtdMax, qtdErr=0;

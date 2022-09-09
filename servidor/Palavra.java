@@ -1,3 +1,4 @@
+package servidor;
 public class Palavra implements Comparable<Palavra>
 {
     private String texto;

@@ -1,3 +1,6 @@
+package testesMain;
+import servidor.Palavra;
+
 public class TestePalavra {
     public static void main (String  args[]) {
         

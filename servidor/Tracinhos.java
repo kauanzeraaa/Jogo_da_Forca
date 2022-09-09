@@ -1,3 +1,4 @@
+package servidor;
 public class Tracinhos implements Cloneable
 {
     private char texto [];
