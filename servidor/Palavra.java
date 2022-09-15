@@ -10,6 +10,7 @@ public class Palavra implements Comparable<Palavra>
         }
         else {
             throw new Exception("[ERRO] Texto não declarado");
+            
         }
 		
     }

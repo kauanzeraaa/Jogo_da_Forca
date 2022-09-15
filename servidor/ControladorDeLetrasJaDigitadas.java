@@ -20,13 +20,11 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         
     }
 
-    
     public void registre (char letra) throws Exception
     {
         if(this.isJaDigitada(letra)) throw new Exception ("A letra fornecida já foi digitada");
         this.letrasJaDigitadas += letra;
-
-		
+        
     }
 
     public String toString()

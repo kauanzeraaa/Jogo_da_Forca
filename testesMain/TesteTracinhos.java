@@ -9,20 +9,28 @@ public class TesteTracinhos {
 
             // testando método revele
             tracinhos.revele(0, 'a'); 
-            tracinhos.revele(1, 'b');
+            tracinhos.revele(3, 'b');
 
             //testando isAindaComTracinhos
             if (tracinhos.isAindaComTracinhos()) System.out.println("Ainda há tracinhos");
             else System.out.println("Não há mais tracinhos");
 
             // testando toString()
-            System.out.println(tracinhos.toString());
+            System.out.println("Mostrar todos os caracteres: " + tracinhos.toString());
+
+            // testando equals
+            if (tracinhos.equals(new Tracinhos(5))) {
+                System.out.println("\nMétodo equals: As quantidades de tracinhos são iguais!");
+            }
+            else {
+                System.out.println("\nMétodo equals: As quantidades de tracinhos não são iguais.");
+            }
 
             // testando hashCode 
-            System.out.println(tracinhos.hashCode());
+            System.out.println("\nhashCode: " + tracinhos.hashCode());
 
-            
-        
+            // testando clone
+            tracinhos.clone();
 
         }
         catch (Exception e) {
