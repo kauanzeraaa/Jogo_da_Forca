@@ -5,27 +5,31 @@ import servidor.ControladorDeLetrasJaDigitadas;
 public class TesteControladorDeLetras {
     public static void main (String args[]) {
         try {
-            char letrasJaDigitadas = 'e';
+            
             ControladorDeLetrasJaDigitadas controladorLetras = new ControladorDeLetrasJaDigitadas();
             
-            // testando isJaDigitada() 
+            // testando registre
             char letra = 'e';
+            controladorLetras.registre(letra);
+            letra = 'k';
+            controladorLetras.registre(letra);
+
+
+            // testando isJaDigitada() 
             if (controladorLetras.isJaDigitada((letra))) {
-                System.out.println("A letra" + letra + " já foi digitada");
+                System.out.println("A letra '" + letra + "' já foi digitada");
             }
             else {
-                System.out.println("A letra " + letra + " ainda não foi digitada");
+                System.out.println("A letra '" + letra + "' ainda não foi digitada");
             }
-
-            // testando registre
             
             // testando toString() 
-            System.out.println("Todos os caracteres já digitados: ");
+            System.out.println("Todos os caracteres já digitados: " + controladorLetras.toString());
 
             // testando equals()
-            if (controladorLetras.equals(new ControladorDeLetrasJaDigitadas())) {
+            if (controladorLetras.equals(new ControladorDeLetrasJaDigitadas())) 
                 System.out.println("This e obj são iguais");
-            }
+                                                                         
             else {
                 System.out.println("This e obj não são iguais");
             }
